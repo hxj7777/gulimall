@@ -1,4 +1,4 @@
-package com.guigu.gulimall.oms;
+package com.guigu.gulimall.gateway;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class GulimallOmsApplicationTests {
+public class GulimallGatewayApplicationTests {
 
     @Test
     public void contextLoads() {

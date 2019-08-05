@@ -1,12 +1,15 @@
 package com.atguigu.gulimall.pms.controller;
 
 import java.util.Arrays;
+import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 
 import com.atguigu.gulimall.commons.bean.PageVo;
 import com.atguigu.gulimall.commons.bean.QueryCondition;
 import com.atguigu.gulimall.commons.bean.Resp;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,6 +36,12 @@ public class CategoryController {
     @Autowired
     private CategoryService categoryService;
 
+    @ApiOperation("某个等级所有分类数据")
+    @GetMapping("/list/tree")
+    public Resp<Object> categoryList(@RequestParam(value = "level") Integer level) {
+        List<CategoryEntity> data =categoryService.getCategoryByLevel(level);
+        return Resp.ok(data);
+    }
     /**
      * 列表
      */

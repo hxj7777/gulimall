@@ -9,7 +9,7 @@ import org.apache.ibatis.annotations.Mapper;
  * 
  * @author hxj
  * @email hxj@atguigu.com
- * @date 2019-08-01 23:52:50
+ * @date 2019-08-02 16:06:36
  */
 @Mapper
 public interface RefundInfoDao extends BaseMapper<RefundInfoEntity> {

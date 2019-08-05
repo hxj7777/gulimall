@@ -5,6 +5,9 @@ import com.atguigu.gulimall.pms.entity.CategoryEntity;
 import com.atguigu.gulimall.commons.bean.PageVo;
 import com.atguigu.gulimall.commons.bean.QueryCondition;
 
+import java.util.List;
+import java.util.Locale;
+
 
 /**
  * 商品三级分类
@@ -16,5 +19,7 @@ import com.atguigu.gulimall.commons.bean.QueryCondition;
 public interface CategoryService extends IService<CategoryEntity> {
 
     PageVo queryPage(QueryCondition params);
+
+    List<CategoryEntity> getCategoryByLevel(Integer level);
 }
 
